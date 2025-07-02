@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discord Embed Builder with Dynamic Fields</title>
+  <link rel="stylesheet" href="/style/style.css" />
+</head>
+<body>
+
+  <h2>Discord Message + Embed Builder</h2>
+
+  <form id="discordForm">
+    <label>Content (plain message)</label>
+    <textarea id="content" rows="3" placeholder="Optional message content outside embed"></textarea>
+
+    <hr />
+    <h3>Embed Setup</h3>
+
+    <div id="embed" class="embed-preview">
+      <label>Author Name</label>
+      <input type="text" id="authorName" placeholder="Optional author name" />
+
+      <label>Author Icon URL</label>
+      <input type="text" id="authorIcon" placeholder="Optional icon URL" />
+
+      <label>Embed Title</label>
+      <input type="text" id="embedTitle" placeholder="Title" />
+
+      <label>Embed Description</label>
+      <textarea id="embedDescription" rows="4" placeholder="Main body text"></textarea>
+
+      <label>Fields</label>
+      <div id="fieldsContainer"></div>
+      <button type="button" id="addFieldBtn">Add Field +</button>
+
+      <label>Thumbnail URL</label>
+      <input type="text" id="thumbnail" placeholder="URL of thumbnail image" />
+
+      <label>Image URL</label>
+      <input type="text" id="image" placeholder="URL of main image" />
+    </div>
+
+    <label>Embed Color</label>
+    <div class="row">
+      <input type="color" id="colorPicker" value="#00aaff" />
+      <div class="template-colors">
+        <div class="template-color" style="background-color:#00aaff" data-color="#00aaff"></div>
+        <div class="template-color" style="background-color:#57f287" data-color="#57f287"></div>
+        <div class="template-color" style="background-color:#faa61a" data-color="#faa61a"></div>
+        <div class="template-color" style="background-color:#ed4245" data-color="#ed4245"></div>
+        <div class="template-color" style="background-color:#5865f2" data-color="#5865f2"></div>
+      </div>
+    </div>
+
+    <button type="submit">Send to Discord</button>
+    <p id="status"></p>
+  </form>
+
+  <script src="/script/script.js"></script>
+</body>
+</html>
